@@ -43,7 +43,7 @@ body.home-page {
 }
 body.home-page p { text-wrap: pretty; }
 
-.hp { max-width: 864px; margin: 0 auto; background: var(--hp-bg); }
+.hp { max-width: 1200px; margin: 0 auto; background: var(--hp-bg); }
 .hp a { color: inherit; }
 .hp a:focus-visible,
 .hp-btn:focus-visible,
@@ -69,21 +69,24 @@ body.home-page p { text-wrap: pretty; }
 }
 .hp-nav__links a:hover { background: var(--hp-navhover); color: var(--hp-accent); }
 
-/* ---- Hero ---- */
-.hp-hero {
-  display: flex; gap: 26px; align-items: center;
-  padding: 38px 32px 30px;
-  background: var(--hp-card); border-bottom: 1px solid var(--hp-border);
+/* ---- Two-column shell: sticky profile sidebar + content ---- */
+.hp-shell {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 44px;
+  padding: 36px 32px 16px;
+  align-items: start;
 }
+.hp-sidebar { position: sticky; top: 72px; align-self: start; }
 .hp-hero__avatar {
-  width: 124px; height: 124px; border-radius: 18px;
-  object-fit: cover; object-position: center top; flex: none;
+  display: block;
+  width: 140px; height: 140px; border-radius: 18px;
+  object-fit: cover; object-position: center top;
   box-shadow: 0 4px 16px rgba(20,40,80,.12);
 }
-.hp-hero__body { flex: 1; min-width: 0; }
-.hp-hero__name { font-weight: 800; font-size: 38px; line-height: 1.05; letter-spacing: -.025em; margin: 0 0 9px; }
-.hp-hero__role { font-size: 15px; color: var(--hp-accent); font-weight: 700; margin-bottom: 11px; }
-.hp-hero__tagline { font-size: 13px; line-height: 1.6; color: var(--hp-sec); max-width: 58ch; margin: 0 0 16px; }
+.hp-hero__name { font-weight: 800; font-size: 30px; line-height: 1.1; letter-spacing: -.02em; margin: 18px 0 8px; }
+.hp-hero__role { font-size: 14px; color: var(--hp-accent); font-weight: 700; line-height: 1.4; margin-bottom: 10px; }
+.hp-hero__tagline { font-size: 13px; line-height: 1.6; color: var(--hp-sec); margin: 0 0 16px; }
 .hp-hero__socials { display: flex; flex-wrap: wrap; gap: 8px; }
 
 .hp-btn {
@@ -95,8 +98,8 @@ body.home-page p { text-wrap: pretty; }
 .hp-btn:hover { background: var(--hp-venue); }
 .hp-btn svg { flex: none; }
 
-/* ---- Main + section headers ---- */
-.hp-main { padding: 34px 32px 12px; }
+/* ---- Content column + section headers ---- */
+.hp-main { min-width: 0; }
 .hp-section { margin-bottom: 34px; scroll-margin-top: 70px; }
 .hp-section--last { margin-bottom: 14px; }
 .hp-sec-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
@@ -201,14 +204,21 @@ body.home-page p { text-wrap: pretty; }
 }
 
 /* ---- Responsive ---- */
-@media (max-width: 700px) {
-  /* On phones the 7 nav links wrap to multiple rows; keep the nav in flow
-     (not sticky) so a jumped-to heading is never hidden under a tall bar. */
-  .hp-nav { position: static; padding: 12px 18px; }
+
+/* Tablet / mobile: collapse the two-column shell into one stacked column.
+   The profile sidebar moves to the top and is no longer sticky; the nav
+   leaves the sticky flow so a jumped-to heading is never hidden under it. */
+@media (max-width: 880px) {
+  .hp-nav { position: static; }
+  .hp-shell { grid-template-columns: 1fr; gap: 24px; padding: 26px 24px 12px; }
+  .hp-sidebar { position: static; }
   .hp-section { scroll-margin-top: 18px; }
-  .hp-hero { flex-direction: column; align-items: flex-start; gap: 18px; padding: 28px 18px 24px; }
-  .hp-hero__name { font-size: 30px; }
-  .hp-main { padding: 28px 18px 12px; }
+}
+
+@media (max-width: 560px) {
+  .hp-nav { padding: 12px 18px; }
+  .hp-shell { padding: 22px 18px 10px; gap: 20px; }
+  .hp-hero__name { font-size: 27px; }
   .hp-footer { padding: 20px 18px 26px; }
   .hp-edu { flex-wrap: wrap; }
   .hp-edu__period { width: 100%; margin-left: 63px; }

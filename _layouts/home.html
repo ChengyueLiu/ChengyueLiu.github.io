@@ -24,9 +24,9 @@ layout: compress
     </div>
   </nav>
 
-  <header class="hp-hero">
-    <img class="hp-hero__avatar" src="{{ '/images/profile.png' | relative_url }}" alt="Chengyue Liu">
-    <div class="hp-hero__body">
+  <div class="hp-shell">
+    <aside class="hp-sidebar">
+      <img class="hp-hero__avatar" src="{{ '/images/profile.png' | relative_url }}" alt="Chengyue Liu">
       <h1 class="hp-hero__name">Chengyue Liu</h1>
       <div class="hp-hero__role">Ph.D. Candidate, Computer Science · NTU Singapore</div>
       <p class="hp-hero__tagline">Researcher in software-engineering &amp; AI-agent systems, working on software supply-chain security and LLM agents. Advised by Prof. Yang Liu.</p>
@@ -54,10 +54,9 @@ layout: compress
         </a>
         {% endif %}
       </div>
-    </div>
-  </header>
+    </aside>
 
-  <main class="hp-main">
+    <main class="hp-main">
 
     <section id="about" class="hp-section">
       <div class="hp-sec-head"><span class="hp-sec-idx">01</span><h2>About</h2><span class="hp-rule"></span></div>
@@ -169,7 +168,8 @@ layout: compress
       </div>
     </section>
 
-  </main>
+    </main>
+  </div>
 
   <footer class="hp-footer">&copy; 2026 Chengyue Liu &middot; Singapore &middot; chengyue.liu@ntu.edu.sg</footer>
 
