@@ -11,6 +11,7 @@ author_role: 'First author'
 paperurl: '/files/papers/fse2026-sca-study.pdf'
 ccf: 'A'
 core: 'A*'
+authors: "Chengyue Liu, Zhengzi Xu, Kaixuan Li, Jiahui Wu, Sihao Qiu, Siyuan Li, Siyang Xiong, Yang Xiao, Yang Liu"
 citation: '<b>Chengyue Liu</b>, et al. (2026). &quot;Understanding the Limitations of C/C++ Binary Third-Party Library Detection Tools: An Empirical Study at Scale.&quot; <i>Proceedings of the ACM on Software Engineering (FSE 2026)</i>.'
 ---
 

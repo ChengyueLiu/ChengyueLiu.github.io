@@ -11,6 +11,7 @@ author_role: 'Co-author'
 paperurl: '/files/papers/issta2026-fork-study.pdf'
 ccf: 'A'
 core: 'A*'
+authors: "Jiaying Zhu, Lyuye Zhang, Jiahui Wu, Chengyue Liu, Yang Liu"
 citation: 'J. Zhu, L. Zhang, J. Wu, <b>Chengyue Liu</b>, Y. Liu. (2026). &quot;Mind the Gap: An Empirical Study of Synchronization Gaps, Delays, and Missed Opportunities in Software Forks.&quot; <i>Proceedings of the ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2026)</i>.'
 ---
 
