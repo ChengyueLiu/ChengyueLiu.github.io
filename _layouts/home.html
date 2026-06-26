@@ -13,16 +13,19 @@ layout: compress
   <link rel="stylesheet" href="{{ '/assets/css/homepage.css' | relative_url }}">
 </head>
 <body class="home-page">
-<div class="hp">
 
-  <nav class="hp-nav">
+<nav class="hp-nav">
+  <div class="hp-nav__inner">
     <span class="hp-nav__name">Chengyue Liu</span>
     <div class="hp-nav__links">
       {% for link in site.data.navigation.main %}
         <a href="{{ link.url }}">{{ link.title }}</a>
       {% endfor %}
     </div>
-  </nav>
+  </div>
+</nav>
+
+<div class="hp">
 
   <div class="hp-shell">
     <aside class="hp-sidebar">
