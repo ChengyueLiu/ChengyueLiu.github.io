@@ -9,6 +9,8 @@ venue: 'FSE'
 status: published
 author_role: 'Co-author'
 paperurl: '/files/papers/fse2025-dbless-sca.pdf'
+ccf: 'A'
+core: 'A*'
 citation: 'L. Zhang, J. Wu, S. Zhang, <b>Chengyue Liu</b>, et al. (2025). &quot;Drop the Golden Apples: Identifying Third-Party Reuse by DB-Less Software Composition Analysis.&quot; <i>Proceedings of the ACM on Software Engineering (FSE 2025)</i>.'
 ---
 
