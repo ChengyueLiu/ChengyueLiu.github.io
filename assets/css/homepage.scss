@@ -60,11 +60,10 @@ body.home-page p { text-wrap: pretty; }
 }
 .hp-nav__inner {
   max-width: 1200px; margin: 0 auto;
-  display: flex; justify-content: space-between; align-items: center;
+  display: flex; justify-content: center; align-items: center;
   padding: 16px 32px;
 }
-.hp-nav__name { font-weight: 800; font-size: 16px; letter-spacing: -.01em; }
-.hp-nav__links { display: flex; gap: 2px; flex-wrap: wrap; justify-content: flex-end; }
+.hp-nav__links { display: flex; gap: 2px; flex-wrap: wrap; justify-content: center; }
 .hp-nav__links a {
   font-weight: 600; font-size: 13px; color: var(--hp-sec);
   text-decoration: none; padding: 6px 9px; border-radius: 7px;
