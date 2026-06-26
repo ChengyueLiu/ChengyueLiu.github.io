@@ -3,6 +3,9 @@ permalink: /
 title: "Chengyue Liu"
 layout: home
 author_profile: false
+description: "Chengyue Liu — Ph.D. Candidate in Computer Science at NTU Singapore, working on AI for software engineering, software supply-chain security, and AI agents."
+header:
+  image: "https://chengyueliu.github.io/images/og-image.jpg"
 redirect_from:
   - /about/
   - /about.html
