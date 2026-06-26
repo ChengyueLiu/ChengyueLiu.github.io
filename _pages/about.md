@@ -7,19 +7,21 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. researcher in Computer Science at [Nanyang Technological University](https://www.ntu.edu.sg/), advised by Prof. Yang Liu (expected 2027). My work bridges top-tier academic research and production systems: I have published 7 papers at premier software-engineering and programming-language venues (3 as first or co-first author), while founding and operating a live AI-agent platform serving 2,000+ users at 7B+ tokens per month.
+I am a Ph.D. candidate in Computer Science at [Nanyang Technological University](https://www.ntu.edu.sg/), Singapore, advised by Prof. Yang Liu. Having passed my qualifying examination, I am now working toward my dissertation.
 
-Before my Ph.D., I worked as an Algorithm Engineer at Shanghai TanXun Technology and as a Software Engineer / Project Manager at AVIC Airborne Systems, building large-scale software security and R&D collaboration systems. I hold an M.Eng. from Beihang University and a B.Eng. from Harbin Institute of Technology (Outstanding Graduate).
+Before my Ph.D., I worked as an Algorithm Engineer at Shanghai TanXun Technology and as a Software Engineer / Project Manager at AVIC Airborne Systems Generic Technology Co., Ltd., where I contributed to the development of the C919, China's first large commercial aircraft. I hold an M.Eng. from Beihang University and a B.Eng. from Harbin Institute of Technology.
 
 Research interests
 ======
-- **Data-driven software supply-chain security** — large-scale empirical analysis, binary Software Composition Analysis (SCA), and adversarial third-party-library detection.
-- **Autonomous LLM agents** — multi-agent architectures for research workflows, LLM-guided program analysis, and the safety of autonomous LLM systems (prompt-injection defense, least-privilege agent design).
 
-Highlights
+During my Ph.D., my research has centered on **AI for Software Engineering**, with a particular focus on **software supply-chain security**, including software composition analysis (SCA) and vulnerability detection, where I have published several papers. I am also actively exploring **AI agent frameworks and their applications**: I have applied AI agents to binary software composition analysis with strong results (accepted at ISSTA 2026), and I built [Xept](https://xept.online), an AI agent for academic writing that represents an important step toward the broader vision of AI Scientists, now serving 2,000+ users.
+
+Recent news
 ======
-- **BLADE** — an evidence-based binary SCA framework achieving 97.60% precision / 93.74% recall (F1 95.63%), outperforming the best baseline by +41.83 F1 points; integrated into a commercial SCA product (ISSTA 2026).
-- First large-scale empirical study of binary SCA tools, benchmarking 11 tools across 38,228 test cases over 1,873 libraries (FSE 2026).
-- **[Xept](https://xept.online)** — an AI-native academic-writing platform I founded and lead, pairing LLM agents with real-time collaborative LaTeX editing; grown to 2,000+ users on a paid-subscription model.
 
-You can find my work on [Google Scholar](https://scholar.google.com/citations?user=CxVwaU0AAAAJ&hl=en), [GitHub](https://github.com/ChengyueLiu), and [LinkedIn](https://www.linkedin.com/in/chengyue-liu-b570032ba/). Feel free to reach me at [liuchengyuechina@gmail.com](mailto:liuchengyuechina@gmail.com).
+- **[2026]** [*Understanding the Limitations of C/C++ Binary Third-Party Library Detection Tools: An Empirical Study at Scale*](/publication/2026-fse-binary-tpl-empirical) accepted at **FSE 2026**.
+- **[2026]** [*Beyond Similarity Scores: Evidence-Based Third-Party Library Detection for C/C++ Binaries*](/publication/2026-issta-blade) accepted at **ISSTA 2026**.
+- **[2026]** [*Mind the Gap: An Empirical Study of Synchronization Gaps, Delays, and Missed Opportunities in Software Forks*](/publication/2026-issta-software-forks) accepted at **ISSTA 2026**.
+- **[2026]** [*From Similarity Ranking to Definitive Verdict: LLM-Enhanced Source-to-Binary Function Localization*](/publication/2026-oopsla-xloc) accepted at **OOPSLA 2026** (co-first author).
+
+Feel free to get in touch via [Google Scholar](https://scholar.google.com/citations?user=CxVwaU0AAAAJ&hl=en), [GitHub](https://github.com/ChengyueLiu), [LinkedIn](https://www.linkedin.com/in/chengyue-liu-b570032ba/), or email at [chengyue.liu@ntu.edu.sg](mailto:chengyue.liu@ntu.edu.sg).
