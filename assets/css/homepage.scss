@@ -57,7 +57,7 @@ body.home-page p { text-wrap: pretty; }
 .hp-nav {
   display: flex; justify-content: space-between; align-items: center;
   padding: 16px 32px;
-  background: var(--hp-card); border-bottom: 1px solid var(--hp-border);
+  background: var(--hp-bg); border-bottom: 1px solid var(--hp-border);
   position: sticky; top: 0; z-index: 50;
 }
 .hp-nav__name { font-weight: 800; font-size: 16px; letter-spacing: -.01em; }
@@ -199,7 +199,7 @@ body.home-page p { text-wrap: pretty; }
 /* ---- Footer ---- */
 .hp-footer {
   padding: 24px 32px 30px;
-  background: var(--hp-card); border-top: 1px solid var(--hp-border);
+  background: var(--hp-bg); border-top: 1px solid var(--hp-border);
   font-size: 12px; color: var(--hp-muted);
 }
 
