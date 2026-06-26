@@ -1,13 +1,8 @@
-{% include base_path %}
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <h2 class="archive__item-title" itemprop="headline">
-      {% if post.ccf %}<span style="display:inline-block;padding:1px 6px;margin-right:5px;border-radius:4px;background:#b91c1c;color:#fff;font-size:0.6em;font-weight:700;vertical-align:middle;letter-spacing:0.3px;">CCF-{{ post.ccf }}</span>{% endif %}{% if post.core %}<span style="display:inline-block;padding:1px 6px;margin-right:5px;border-radius:4px;background:#1d4ed8;color:#fff;font-size:0.6em;font-weight:700;vertical-align:middle;letter-spacing:0.3px;">CORE {{ post.core }}</span>{% endif %}<a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
-    </h2>
-    {% if post.authors %}<p class="archive__item-excerpt" style="margin-bottom:0;">{{ post.authors | replace: 'Chengyue Liu', '<strong>Chengyue Liu</strong>' }}</p>{% endif %}
-    <p class="archive__item-excerpt"{% if post.authors %} style="margin-top:0.25em;"{% endif %}>
-      <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}{% if post.status %} &middot; {{ post.status | capitalize }}{% endif %}{% if post.author_role %} &middot; {{ post.author_role }}{% endif %}{% if post.paperurl %} &middot; <a href="{{ post.paperurl }}">PDF</a>{% endif %}
-    </p>
-  </article>
-</div>
+{% assign yr = post.date | default: "1900-01-01" | date: "%Y" %}
+<li style="margin-bottom:1em;">
+  {% if post.ccf %}<img src="https://img.shields.io/badge/CCF-{{ post.ccf }}-red?style=flat-square" alt="CCF-{{ post.ccf }}" style="vertical-align:middle;" /> {% endif %}{% if post.core %}<img src="https://img.shields.io/badge/CORE-{{ post.core | replace: '*', '%2A' }}-orange?style=flat-square" alt="CORE {{ post.core }}" style="vertical-align:middle;" /> {% endif %}<img src="https://img.shields.io/badge/{{ post.venue }}-{{ yr }}-blue?style=flat-square" alt="{{ post.venue }} {{ yr }}" style="vertical-align:middle;" /> <strong>{{ post.title }}</strong>
+  <ul style="margin-top:0.2em;">
+    <li>{{ post.authors | replace: 'Chengyue Liu', '<strong>Chengyue Liu</strong>' }}</li>
+    <li><em>{{ post.venue }}</em>, {{ yr }}{% if post.status %} &middot; {{ post.status | capitalize }}{% endif %}{% if post.author_role %} &middot; {{ post.author_role }}{% endif %}{% if post.paperurl %} &middot; <a href="{{ post.paperurl }}">PDF</a>{% endif %}</li>
+  </ul>
+</li>
