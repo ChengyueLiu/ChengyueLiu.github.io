@@ -1,0 +1,179 @@
+---
+layout: compress
+---
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  {% include seo.html %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/homepage.css' | relative_url }}">
+</head>
+<body class="home-page">
+<div class="hp">
+
+  <nav class="hp-nav">
+    <span class="hp-nav__name">Chengyue Liu</span>
+    <div class="hp-nav__links">
+      {% for link in site.data.navigation.main %}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
+    </div>
+  </nav>
+
+  <header class="hp-hero">
+    <img class="hp-hero__avatar" src="{{ '/images/profile.png' | relative_url }}" alt="Chengyue Liu">
+    <div class="hp-hero__body">
+      <h1 class="hp-hero__name">Chengyue Liu</h1>
+      <div class="hp-hero__role">Ph.D. Candidate, Computer Science · NTU Singapore</div>
+      <p class="hp-hero__tagline">Researcher in software-engineering &amp; AI-agent systems, working on software supply-chain security and LLM agents. Advised by Prof. Yang Liu.</p>
+      <div class="hp-hero__socials">
+        <a class="hp-btn" id="email-copy" href="mailto:chengyue.liu@ntu.edu.sg" title="Click to copy email">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="m3.5 7.5 8.5 5.5 8.5-5.5"></path></svg>
+          <span class="hp-btn__label" aria-live="polite">Email</span>
+        </a>
+        <a class="hp-btn" href="https://scholar.google.com/citations?user=CxVwaU0AAAAJ&amp;hl=en" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 0 8.2l12 6.1 9.6-4.88V17H24V8.2z"></path><path d="M4.3 13.4v3.1C4.3 18.4 7.75 20 12 20s7.7-1.6 7.7-3.5v-3.1L12 17.3z"></path></svg>
+          Google Scholar
+        </a>
+        <a class="hp-btn" href="https://github.com/ChengyueLiu" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+          GitHub
+        </a>
+        <a class="hp-btn" href="https://www.linkedin.com/in/chengyue-liu-b570032ba" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg>
+          LinkedIn
+        </a>
+        {% if site.author.orcid %}
+        <a class="hp-btn" href="{{ site.author.orcid }}" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="11"></circle><g fill="#fff"><path d="M8.7 7.4a1.05 1.05 0 1 1-2.1 0 1.05 1.05 0 0 1 2.1 0z"></path><rect x="6.85" y="9.6" width="1.55" height="7.8"></rect><path d="M10.3 9.6h3.27c3.02 0 4.36 2.16 4.36 3.9 0 1.9-1.48 3.9-4.34 3.9H10.3zm1.55 1.4v5h1.62c1.94 0 2.84-1.15 2.84-2.5 0-1.45-.9-2.5-2.82-2.5z"></path></g></svg>
+          ORCID
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <main class="hp-main">
+
+    <section id="about" class="hp-section">
+      <div class="hp-sec-head"><span class="hp-sec-idx">01</span><h2>About</h2><span class="hp-rule"></span></div>
+      <div class="hp-card hp-prose">{{ page.about | markdownify }}</div>
+    </section>
+
+    <section id="research" class="hp-section">
+      <div class="hp-sec-head"><span class="hp-sec-idx">02</span><h2>Research Interests</h2><span class="hp-rule"></span></div>
+      <div class="hp-card hp-prose">{{ page.research | markdownify }}</div>
+    </section>
+
+    <section id="news" class="hp-section">
+      <div class="hp-sec-head"><span class="hp-sec-idx">03</span><h2>News</h2><span class="hp-rule"></span></div>
+      <div class="hp-card hp-timeline">
+        {% for n in site.data.news %}
+        <div class="hp-tl-item">
+          <div class="hp-tl-rail"><span class="hp-tl-dot"></span>{% unless forloop.last %}<span class="hp-tl-line hp-tl-line--news"></span>{% endunless %}</div>
+          <div class="hp-tl-body hp-news">
+            <div class="hp-news__date">{{ n.date }}</div>
+            <div class="hp-news__text">Our paper &ldquo;{{ n.title }}&rdquo; is accepted by {{ n.venue }}.</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="publications" class="hp-section hp-section--wide">
+      <div class="hp-sec-head"><span class="hp-sec-idx">04</span><h2>Publications</h2><span class="hp-rule"></span></div>
+      {% assign pubs = site.publications | sort: 'date' | reverse %}
+      {% assign groups = pubs | group_by_exp: 'p', 'p.date | date: "%Y"' | sort: 'name' | reverse %}
+      {% for g in groups %}
+      <div class="hp-tl-item">
+        <div class="hp-tl-rail"><span class="hp-tl-dot"></span>{% unless forloop.last %}<span class="hp-tl-line hp-tl-line--pub"></span>{% endunless %}</div>
+        <div class="hp-tl-body hp-pubyear">
+          <details class="hp-year"{% if forloop.first %} open{% endif %}>
+            <summary class="hp-year__head">
+              <span class="hp-year__num">{{ g.name }}</span>
+              <span class="hp-year__count">{{ g.items | size }}{% if g.items.size == 1 %} paper{% else %} papers{% endif %}</span>
+              <span class="hp-year__caret" aria-hidden="true"></span>
+            </summary>
+            <div class="hp-year__items">
+              {% for post in g.items %}
+              {% assign self = post.author_self | default: 'Chengyue Liu' %}
+              {% capture selfbold %}<b class="hp-me">{{ self }}</b>{% endcapture %}
+              {% assign yr = post.date | date: "%Y" %}
+              <div class="hp-pub">
+                <div class="hp-pub__title">{{ post.title }}</div>
+                <div class="hp-pub__authors">{{ post.authors | replace: self, selfbold }}</div>
+                <div class="hp-pub__meta">
+                  <span class="hp-chip hp-chip--venue">{{ post.venue }} {{ yr }}</span>
+                  {% if post.ccf %}<span class="hp-chip hp-chip--rank">CCF-{{ post.ccf }}</span>{% endif %}
+                  {% if post.core %}<span class="hp-chip hp-chip--rank">CORE {{ post.core }}</span>{% endif %}
+                  {% if post.author_role %}<span class="hp-chip hp-chip--role">{{ post.author_role }}</span>{% endif %}
+                  {% if post.paperurl %}<a class="hp-pub__pdf" href="{{ post.paperurl | relative_url }}" target="_blank" rel="noopener">PDF &rarr;</a>{% endif %}
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </details>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+
+    <section id="projects" class="hp-section hp-section--wide">
+      <div class="hp-sec-head"><span class="hp-sec-idx">05</span><h2>Projects</h2><span class="hp-rule"></span></div>
+      <div class="hp-projects">
+        {% for pr in site.portfolio %}
+        <div class="hp-card hp-project">
+          <h3 class="hp-project__name">{{ pr.title }}</h3>
+          <p class="hp-project__text">{{ pr.description }}</p>
+          {% if pr.link %}<a class="hp-visit" href="{{ pr.link }}" target="_blank" rel="noopener">{{ pr.link_label | default: pr.link }} &rarr;</a>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="experience" class="hp-section hp-section--wide">
+      <div class="hp-sec-head"><span class="hp-sec-idx">06</span><h2>Experience</h2><span class="hp-rule"></span></div>
+      <div class="hp-card hp-timeline">
+        {% for x in site.data.experience %}
+        <div class="hp-tl-item">
+          <div class="hp-tl-rail"><span class="hp-tl-dot"></span>{% unless forloop.last %}<span class="hp-tl-line hp-tl-line--exp"></span>{% endunless %}</div>
+          <div class="hp-tl-body hp-exp">
+            <div class="hp-exp__period">{{ x.period }}</div>
+            <div class="hp-exp__role">{{ x.role }}</div>
+            <div class="hp-exp__org">{{ x.org }}</div>
+            {% if x.desc and x.desc != "" %}<div class="hp-exp__desc">{{ x.desc }}</div>{% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="education" class="hp-section hp-section--wide hp-section--last">
+      <div class="hp-sec-head"><span class="hp-sec-idx">07</span><h2>Education</h2><span class="hp-rule"></span></div>
+      <div class="hp-edu-list">
+        {% for e in site.data.education %}
+        <div class="hp-card hp-edu">
+          <div class="hp-edu__crest"><img src="{{ e.logo | relative_url }}" alt=""></div>
+          <div class="hp-edu__body">
+            <div class="hp-edu__degree">{{ e.degree }}</div>
+            <div class="hp-edu__school">{{ e.school }}</div>
+            {% if e.note and e.note != "" %}<div class="hp-edu__note">{{ e.note }}</div>{% endif %}
+          </div>
+          <span class="hp-edu__period">{{ e.period }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="hp-footer">&copy; 2026 Chengyue Liu &middot; Singapore &middot; chengyue.liu@ntu.edu.sg</footer>
+
+</div>
+<script src="{{ '/assets/js/homepage.js' | relative_url }}"></script>
+</body>
+</html>

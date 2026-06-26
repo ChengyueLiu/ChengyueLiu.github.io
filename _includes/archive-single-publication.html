@@ -1,8 +1,0 @@
-{% assign yr = post.date | default: "1900-01-01" | date: "%Y" %}
-<li style="margin-bottom:1em;">
-  {% if post.ccf %}<img src="https://img.shields.io/badge/CCF-{{ post.ccf }}-red?style=flat-square" alt="CCF-{{ post.ccf }}" style="vertical-align:middle;" /> {% endif %}{% if post.core %}<img src="https://img.shields.io/badge/CORE-{{ post.core | replace: '*', '%2A' }}-orange?style=flat-square" alt="CORE {{ post.core }}" style="vertical-align:middle;" /> {% endif %}<img src="https://img.shields.io/badge/{{ post.venue }}-{{ yr }}-blue?style=flat-square" alt="{{ post.venue }} {{ yr }}" style="vertical-align:middle;" /> <strong>{{ post.title }}</strong>
-  <ul style="margin-top:0.2em;">
-    <li>{{ post.authors | replace: 'Chengyue Liu', '<strong>Chengyue Liu</strong>' }}</li>
-    <li><em>{{ post.venue }}</em>, {{ yr }}{% if post.status %} &middot; {{ post.status | capitalize }}{% endif %}{% if post.author_role %} &middot; {{ post.author_role }}{% endif %}{% if post.paperurl %} &middot; <a href="{{ post.paperurl }}">PDF</a>{% endif %}</li>
-  </ul>
-</li>

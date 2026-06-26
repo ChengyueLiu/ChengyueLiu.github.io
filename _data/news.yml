@@ -1,0 +1,14 @@
+# Recent news — newest first. Each item renders as:
+#   Our paper "<title>" is accepted by <venue>.
+- date: "Jun 25, 2026"
+  venue: "ISSTA 2026"
+  title: "Mind the Gap: An Empirical Study of Synchronization Gaps, Delays, and Missed Opportunities in Software Forks"
+- date: "Jun 11, 2026"
+  venue: "OOPSLA 2026"
+  title: "From Similarity Ranking to Definitive Verdict: LLM-Enhanced Source-to-Binary Function Localization"
+- date: "Apr 2026"
+  venue: "ISSTA 2026"
+  title: "Beyond Similarity Scores: Evidence-Based Third-Party Library Detection for C/C++ Binaries"
+- date: "Mar 2026"
+  venue: "FSE 2026"
+  title: "Understanding the Limitations of C/C++ Binary Third-Party Library Detection Tools: An Empirical Study at Scale"
