@@ -7,6 +7,7 @@ excerpt: 'First large-scale empirical study of binary SCA tools, benchmarking 11
 date: 2026-11-01
 venue: 'FSE'
 status: accepted
+author_role: 'First author'
 citation: '<b>Chengyue Liu</b>, et al. (2026). &quot;Understanding the Limitations of C/C++ Binary Third-Party Library Detection Tools: An Empirical Study at Scale.&quot; <i>Proceedings of the ACM on Software Engineering (FSE 2026)</i>.'
 ---
 

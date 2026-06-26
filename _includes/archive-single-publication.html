@@ -6,7 +6,7 @@
       <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
     </h2>
     <p class="archive__item-excerpt">
-      <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}{% if post.status %} &middot; {{ post.status | capitalize }}{% endif %}{% if post.paperurl %} &middot; <a href="{{ post.paperurl }}">PDF</a>{% endif %}
+      <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}{% if post.status %} &middot; {{ post.status | capitalize }}{% endif %}{% if post.author_role %} &middot; {{ post.author_role }}{% endif %}{% if post.paperurl %} &middot; <a href="{{ post.paperurl }}">PDF</a>{% endif %}
     </p>
   </article>
 </div>

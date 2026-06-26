@@ -22,6 +22,6 @@ Recent news
 - **[2026]** [*Understanding the Limitations of C/C++ Binary Third-Party Library Detection Tools: An Empirical Study at Scale*](/publication/2026-fse-binary-tpl-empirical) accepted at **FSE 2026**.
 - **[2026]** [*Beyond Similarity Scores: Evidence-Based Third-Party Library Detection for C/C++ Binaries*](/publication/2026-issta-blade) accepted at **ISSTA 2026**.
 - **[2026]** [*Mind the Gap: An Empirical Study of Synchronization Gaps, Delays, and Missed Opportunities in Software Forks*](/publication/2026-issta-software-forks) accepted at **ISSTA 2026**.
-- **[2026]** [*From Similarity Ranking to Definitive Verdict: LLM-Enhanced Source-to-Binary Function Localization*](/publication/2026-oopsla-xloc) accepted at **OOPSLA 2026** (co-first author).
+- **[2026]** [*From Similarity Ranking to Definitive Verdict: LLM-Enhanced Source-to-Binary Function Localization*](/publication/2026-oopsla-xloc) accepted at **OOPSLA 2026**.
 
-Feel free to get in touch via [Google Scholar](https://scholar.google.com/citations?user=CxVwaU0AAAAJ&hl=en), [GitHub](https://github.com/ChengyueLiu), [LinkedIn](https://www.linkedin.com/in/chengyue-liu-b570032ba/), or email at [chengyue.liu@ntu.edu.sg](mailto:chengyue.liu@ntu.edu.sg).
+Feel free to reach me by email at [chengyue.liu@ntu.edu.sg](mailto:chengyue.liu@ntu.edu.sg).
