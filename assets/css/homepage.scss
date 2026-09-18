@@ -160,6 +160,8 @@ body.home-page p { text-wrap: pretty; }
 .hp-pub__title { font-weight: 700; font-size: 16px; line-height: 1.4; color: var(--hp-ink); }
 .hp-pub__authors { font-size: 13px; color: var(--hp-author); margin-top: 7px; line-height: 1.5; }
 .hp-pub__authors .hp-me { color: var(--hp-ink); font-weight: 700; }
+.hp-pub__authors a { color: inherit; text-decoration: underline; text-decoration-color: var(--hp-chipborder); text-underline-offset: 3px; }
+.hp-pub__authors a:hover { color: var(--hp-accent); text-decoration-color: currentColor; }
 .hp-pub__meta { display: flex; gap: 7px; align-items: center; margin-top: 12px; flex-wrap: wrap; }
 .hp-chip { border-radius: 6px; }
 .hp-chip--venue { @include mono(600, 11px); color: var(--hp-accent); background: var(--hp-venue); padding: 3px 9px; }

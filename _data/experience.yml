@@ -1,7 +1,8 @@
 # Work experience — newest first. `logo` is optional; logos live in /images/exp/.
 - role: "Algorithm Engineer"
-  org: "Shanghai TanXun Technology"
+  org: "Shanghai TanXun Technology (Scantist)"
   period: "2022 – 2024"
+  logo: "/images/exp/scantist.svg"
   desc: ""
 - role: "Software Engineer / Project Manager"
   org: "AVIC Airborne Systems Generic Technology Co., Ltd."

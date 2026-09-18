@@ -102,11 +102,11 @@ layout: compress
             <div class="hp-year__items">
               {% for post in g.items %}
               {% assign self = post.author_self | default: 'Chengyue Liu' %}
-              {% capture selfbold %}<b class="hp-me">{{ self }}</b>{% endcapture %}
+              {% assign names = post.authors | split: ', ' %}
               {% assign yr = post.date | date: "%Y" %}
               <div class="hp-pub">
                 <div class="hp-pub__title">{{ post.title }}</div>
-                <div class="hp-pub__authors">{{ post.authors | replace: self, selfbold }}</div>
+                <div class="hp-pub__authors">{% for raw in names %}{% assign key = raw | remove: '*' | strip %}{% assign url = site.data.coauthors[key] %}{% if raw == self %}<b class="hp-me">{{ raw }}</b>{% elsif url and url != "" %}<a href="{{ url }}" target="_blank" rel="noopener">{{ raw }}</a>{% else %}{{ raw }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</div>
                 <div class="hp-pub__meta">
                   <span class="hp-chip hp-chip--venue">{{ post.venue }} {{ yr }}</span>
                   {% if post.ccf %}<span class="hp-chip hp-chip--rank">CCF-{{ post.ccf }}</span>{% endif %}
@@ -125,7 +125,7 @@ layout: compress
     </section>
 
     <section id="projects" class="hp-section hp-section--wide">
-      <div class="hp-sec-head"><span class="hp-sec-idx">05</span><h2>Projects</h2><span class="hp-rule"></span></div>
+      <div class="hp-sec-head"><span class="hp-sec-idx">05</span><h2>Selected Projects</h2><span class="hp-rule"></span></div>
       <div class="hp-projects">
         {% for pr in site.portfolio %}
         <div class="hp-card hp-project">
@@ -138,7 +138,7 @@ layout: compress
     </section>
 
     <section id="experience" class="hp-section hp-section--wide">
-      <div class="hp-sec-head"><span class="hp-sec-idx">06</span><h2>Experience</h2><span class="hp-rule"></span></div>
+      <div class="hp-sec-head"><span class="hp-sec-idx">06</span><h2>Work Experience</h2><span class="hp-rule"></span></div>
       <div class="hp-card hp-timeline">
         {% for x in site.data.experience %}
         <div class="hp-tl-item">

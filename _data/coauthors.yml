@@ -1,0 +1,5 @@
+# Co-author homepages. Keys must match the name exactly as written in a
+# publication's `authors:` field (without any trailing "*"). Names listed here
+# are linked in the homepage publication list; everyone else stays plain text.
+"Kaixuan Li": "https://kaixuanli-ecnu.github.io/"
+"Wenbo Guo": "https://about.honywen.com/"

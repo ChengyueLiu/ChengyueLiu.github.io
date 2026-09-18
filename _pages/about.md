@@ -12,7 +12,7 @@ redirect_from:
 about: |
   I am a Ph.D. candidate in Computer Science at Nanyang Technological University, Singapore, advised by Prof. Yang Liu. Having passed my qualifying examination, I am now working toward my dissertation.
 
-  Before my Ph.D., I worked as an Algorithm Engineer at Shanghai TanXun Technology and as a Software Engineer / Project Manager at AVIC Airborne Systems Generic Technology Co., Ltd., where I contributed to the development of the C919, China's first large commercial aircraft.
+  Before my Ph.D., I worked as an Algorithm Engineer at Shanghai TanXun Technology (Scantist) and as a Software Engineer / Project Manager at AVIC Airborne Systems Generic Technology Co., Ltd., where I contributed to the development of the C919, China's first large commercial aircraft.
 research: |
   My research centers on AI for Software Engineering, with a focus on software supply-chain security, including software composition analysis (SCA) and vulnerability detection.
 
