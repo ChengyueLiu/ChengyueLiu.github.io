@@ -100,9 +100,17 @@ layout: compress
               <span class="hp-year__caret" aria-hidden="true"></span>
             </summary>
             <div class="hp-year__items">
+              {% comment %} Within a year, order by my position in the author list (first-author
+              papers first). Papers with the same position keep the date order above; a paper
+              whose author list doesn't contain me falls to the end rather than disappearing. {% endcomment %}
+              {% for rank in (0..60) %}
               {% for post in g.items %}
               {% assign self = post.author_self | default: 'Chengyue Liu' %}
               {% assign names = post.authors | split: ', ' %}
+              {% assign mypos = 60 %}
+              {% for raw in names %}{% if raw == self %}{% assign mypos = forloop.index0 %}{% endif %}{% endfor %}
+              {% if mypos > 60 %}{% assign mypos = 60 %}{% endif %}
+              {% if mypos == rank %}
               {% assign yr = post.date | date: "%Y" %}
               <div class="hp-pub">
                 <div class="hp-pub__title">{{ post.title }}</div>
@@ -116,6 +124,8 @@ layout: compress
                   {% if post.paperurl %}<a class="hp-pub__pdf" href="{{ post.paperurl | relative_url }}" target="_blank" rel="noopener">PDF &rarr;</a>{% endif %}
                 </div>
               </div>
+              {% endif %}
+              {% endfor %}
               {% endfor %}
             </div>
           </details>
