@@ -174,8 +174,8 @@ layout: compress
         <div class="hp-card hp-edu">
           <div class="hp-edu__crest"><img src="{{ e.logo | relative_url }}" alt=""></div>
           <div class="hp-edu__body">
-            <div class="hp-edu__degree">{{ e.degree }}</div>
-            <div class="hp-edu__school">{{ e.school }}</div>
+            <div class="hp-edu__degree">{{ e.degree }} &middot; {{ e.school }}</div>
+            {% if e.major and e.major != "" %}<div class="hp-edu__major">{{ e.major }}</div>{% endif %}
             {% if e.note and e.note != "" %}<div class="hp-edu__note">{{ e.note }}</div>{% endif %}
           </div>
           <span class="hp-edu__period">{{ e.period }}</span>

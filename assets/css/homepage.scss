@@ -207,7 +207,7 @@ body.home-page p { text-wrap: pretty; }
 .hp-edu__crest img { width: 40px; height: 40px; object-fit: contain; }
 .hp-edu__body { flex: 1; min-width: 0; }
 .hp-edu__degree { font-size: 15px; font-weight: 700; color: var(--hp-ink); }
-.hp-edu__school { font-size: 13px; color: var(--hp-sec); margin-top: 3px; }
+.hp-edu__major { font-size: 13px; color: var(--hp-sec); margin-top: 3px; }
 .hp-edu__note { font-size: 12px; color: var(--hp-muted); margin-top: 3px; }
 .hp-edu__period { @include mono(600, 12px); color: var(--hp-muted); white-space: nowrap; }
 
