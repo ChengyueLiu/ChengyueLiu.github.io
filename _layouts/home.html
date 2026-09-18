@@ -10,7 +10,7 @@ layout: compress
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/homepage.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/homepage.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body class="home-page">
 
@@ -150,7 +150,7 @@ layout: compress
               <div class="hp-exp__org">{{ x.org }}</div>
               {% if x.desc and x.desc != "" %}<div class="hp-exp__desc">{{ x.desc }}</div>{% endif %}
             </div>
-            {% if x.logo and x.logo != "" %}<div class="hp-exp__logo"><img src="{{ x.logo | relative_url }}" alt=""></div>{% endif %}
+            {% if x.logo and x.logo != "" %}<div class="hp-exp__logo"><img src="{{ x.logo | relative_url }}" alt="" width="34" height="34"></div>{% endif %}
           </div>
         </div>
         {% endfor %}
@@ -180,6 +180,6 @@ layout: compress
   <footer class="hp-footer">&copy; 2026 Chengyue Liu &middot; Singapore &middot; chengyue.liu@ntu.edu.sg</footer>
 
 </div>
-<script src="{{ '/assets/js/homepage.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/homepage.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 </body>
 </html>
