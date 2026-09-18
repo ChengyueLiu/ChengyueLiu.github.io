@@ -78,7 +78,7 @@ layout: compress
           <div class="hp-tl-rail"><span class="hp-tl-dot"></span>{% unless forloop.last %}<span class="hp-tl-line hp-tl-line--news"></span>{% endunless %}</div>
           <div class="hp-tl-body hp-news">
             <div class="hp-news__date">{{ n.date }}</div>
-            <div class="hp-news__text">Our paper &ldquo;{{ n.title }}&rdquo; is accepted by {{ n.venue }}.</div>
+            <div class="hp-news__text">{% if n.award %}&#127942; Our {{ n.venue }} paper &ldquo;{{ n.title }}&rdquo; received the <b>{{ n.award }}</b>.{% else %}Our paper &ldquo;{{ n.title }}&rdquo; is accepted by {{ n.venue }}.{% endif %}</div>
           </div>
         </div>
         {% endfor %}
@@ -112,6 +112,7 @@ layout: compress
                   {% if post.ccf %}<span class="hp-chip hp-chip--rank">CCF-{{ post.ccf }}</span>{% endif %}
                   {% if post.core %}<span class="hp-chip hp-chip--rank">CORE {{ post.core }}</span>{% endif %}
                   {% if post.author_role %}<span class="hp-chip hp-chip--role">{{ post.author_role }}</span>{% endif %}
+                  {% if post.award %}<span class="hp-chip hp-chip--award">&#127942; {{ post.award }}</span>{% endif %}
                   {% if post.paperurl %}<a class="hp-pub__pdf" href="{{ post.paperurl | relative_url }}" target="_blank" rel="noopener">PDF &rarr;</a>{% endif %}
                 </div>
               </div>

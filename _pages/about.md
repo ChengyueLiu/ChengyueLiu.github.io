@@ -16,5 +16,5 @@ about: |
 research: |
   My research centers on AI for Software Engineering, with a focus on software supply-chain security, including software composition analysis (SCA) and vulnerability detection.
 
-  I also explore AI-agent frameworks and their applications: I applied AI agents to binary SCA (ISSTA 2026), and built [Xept](https://xept.online), an AI agent for academic writing and a step toward the broader vision of AI Scientists, now serving 2,000+ users.
+  I also explore AI-agent frameworks and their applications: I applied AI agents to binary SCA (ISSTA 2026, ACM SIGSOFT Distinguished Paper Award), and built [Xept](https://xept.online), an AI agent for academic writing and a step toward the broader vision of AI Scientists, now serving 2,000+ users.
 ---

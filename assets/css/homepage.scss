@@ -21,6 +21,9 @@
   --hp-sec:#5b6675;
   --hp-muted:#94a0b0;
   --hp-author:#6b7686;
+  --hp-award:#8a5a00;
+  --hp-awardbg:#fdf3d7;
+  --hp-awardborder:#f0d894;
 }
 
 @mixin mono($w: 600, $s: 12px) {
@@ -162,6 +165,7 @@ body.home-page p { text-wrap: pretty; }
 .hp-chip--venue { @include mono(600, 11px); color: var(--hp-accent); background: var(--hp-venue); padding: 3px 9px; }
 .hp-chip--rank  { @include mono(600, 11px); color: var(--hp-accent); background: var(--hp-card); border: 1px solid var(--hp-chipborder); padding: 2px 8px; }
 .hp-chip--role  { font-weight: 600; font-size: 11px; color: var(--hp-sec); background: var(--hp-neutral); padding: 3px 9px; }
+.hp-chip--award { font-weight: 700; font-size: 11px; color: var(--hp-award); background: var(--hp-awardbg); border: 1px solid var(--hp-awardborder); padding: 2px 8px; }
 .hp-pub__pdf { @include mono(600, 12px); color: var(--hp-accent); text-decoration: none; margin-left: auto; }
 .hp-pub__pdf:hover { text-decoration: underline; }
 
