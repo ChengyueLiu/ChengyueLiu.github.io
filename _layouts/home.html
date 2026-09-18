@@ -144,10 +144,13 @@ layout: compress
         <div class="hp-tl-item">
           <div class="hp-tl-rail"><span class="hp-tl-dot"></span>{% unless forloop.last %}<span class="hp-tl-line hp-tl-line--exp"></span>{% endunless %}</div>
           <div class="hp-tl-body hp-exp">
-            <div class="hp-exp__period">{{ x.period }}</div>
-            <div class="hp-exp__role">{{ x.role }}</div>
-            <div class="hp-exp__org">{{ x.org }}</div>
-            {% if x.desc and x.desc != "" %}<div class="hp-exp__desc">{{ x.desc }}</div>{% endif %}
+            <div class="hp-exp__main">
+              <div class="hp-exp__period">{{ x.period }}</div>
+              <div class="hp-exp__role">{{ x.role }}</div>
+              <div class="hp-exp__org">{{ x.org }}</div>
+              {% if x.desc and x.desc != "" %}<div class="hp-exp__desc">{{ x.desc }}</div>{% endif %}
+            </div>
+            {% if x.logo and x.logo != "" %}<div class="hp-exp__logo"><img src="{{ x.logo | relative_url }}" alt=""></div>{% endif %}
           </div>
         </div>
         {% endfor %}

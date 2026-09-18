@@ -1,4 +1,4 @@
-# Work experience — newest first.
+# Work experience — newest first. `logo` is optional; logos live in /images/exp/.
 - role: "Algorithm Engineer"
   org: "Shanghai TanXun Technology"
   period: "2022 – 2024"
@@ -6,4 +6,5 @@
 - role: "Software Engineer / Project Manager"
   org: "AVIC Airborne Systems Generic Technology Co., Ltd."
   period: "2020 – 2022"
+  logo: "/images/exp/avic.png"
   desc: "Contributed to the development of the C919, China's first large commercial aircraft."

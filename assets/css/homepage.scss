@@ -183,7 +183,13 @@ body.home-page p { text-wrap: pretty; }
 .hp-visit:hover { background: var(--hp-venue); }
 
 /* ---- Experience ---- */
-.hp-exp { padding-bottom: 22px; }
+.hp-exp { padding-bottom: 22px; display: flex; gap: 15px; align-items: flex-start; }
+.hp-exp__main { flex: 1; min-width: 0; }
+.hp-exp__logo {
+  width: 48px; height: 48px; border-radius: 50%; background: var(--hp-card); border: 1px solid var(--hp-border);
+  flex: none; display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.hp-exp__logo img { width: 34px; height: 34px; object-fit: contain; }
 .hp-exp__period { @include mono(600, 12px); color: var(--hp-accent); margin-bottom: 4px; }
 .hp-exp__role { font-size: 15px; font-weight: 700; color: var(--hp-ink); }
 .hp-exp__org { font-size: 13px; color: var(--hp-accent); font-weight: 600; margin-top: 2px; }
