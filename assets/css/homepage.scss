@@ -131,6 +131,10 @@ body.home-page p { text-wrap: pretty; }
 .hp-tl-line--news { margin-top: 5px; min-height: 26px; }
 .hp-tl-line--pub  { margin-top: 6px; min-height: 24px; }
 .hp-tl-line--exp  { margin-top: 5px; min-height: 34px; }
+/* Logo rail: company logos act as the timeline nodes; a dot fallback is centred in the same slot. */
+.hp-tl-rail--logo { width: 48px; margin-top: 0; }
+.hp-tl-rail--logo .hp-tl-dot { margin: 18px 0; }
+.hp-tl-rail--logo .hp-tl-line { margin: 5px 0; min-height: 12px; }
 .hp-tl-body { flex: 1; min-width: 0; }
 
 .hp-news { padding-bottom: 20px; }
@@ -185,8 +189,7 @@ body.home-page p { text-wrap: pretty; }
 .hp-visit:hover { background: var(--hp-venue); }
 
 /* ---- Experience ---- */
-.hp-exp { padding-bottom: 22px; display: flex; gap: 15px; align-items: flex-start; }
-.hp-exp__main { flex: 1; min-width: 0; }
+.hp-exp { padding-bottom: 22px; }
 .hp-exp__logo {
   width: 48px; height: 48px; border-radius: 50%; background: var(--hp-card); border: 1px solid var(--hp-border);
   flex: none; display: flex; align-items: center; justify-content: center; overflow: hidden;

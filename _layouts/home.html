@@ -150,17 +150,17 @@ layout: compress
     <section id="experience" class="hp-section hp-section--wide">
       <div class="hp-sec-head"><span class="hp-sec-idx">06</span><h2>Work Experience</h2><span class="hp-rule"></span></div>
       <div class="hp-card hp-timeline">
+        {% comment %} When any entry has a logo, logos become the timeline nodes (a wider rail);
+        entries without one fall back to the dot, centred in that rail so the text stays aligned. {% endcomment %}
+        {% assign exp_logos = site.data.experience | map: 'logo' | compact | join: '' %}
         {% for x in site.data.experience %}
         <div class="hp-tl-item">
-          <div class="hp-tl-rail"><span class="hp-tl-dot"></span>{% unless forloop.last %}<span class="hp-tl-line hp-tl-line--exp"></span>{% endunless %}</div>
+          <div class="hp-tl-rail{% if exp_logos != '' %} hp-tl-rail--logo{% endif %}">{% if x.logo and x.logo != "" %}<span class="hp-exp__logo"><img src="{{ x.logo | relative_url }}" alt="" width="34" height="34"></span>{% else %}<span class="hp-tl-dot"></span>{% endif %}{% unless forloop.last %}<span class="hp-tl-line hp-tl-line--exp"></span>{% endunless %}</div>
           <div class="hp-tl-body hp-exp">
-            <div class="hp-exp__main">
-              <div class="hp-exp__period">{{ x.period }}</div>
-              <div class="hp-exp__role">{{ x.role }}</div>
-              <div class="hp-exp__org">{{ x.org }}</div>
-              {% if x.desc and x.desc != "" %}<div class="hp-exp__desc">{{ x.desc }}</div>{% endif %}
-            </div>
-            {% if x.logo and x.logo != "" %}<div class="hp-exp__logo"><img src="{{ x.logo | relative_url }}" alt="" width="34" height="34"></div>{% endif %}
+            <div class="hp-exp__period">{{ x.period }}</div>
+            <div class="hp-exp__role">{{ x.role }}</div>
+            <div class="hp-exp__org">{{ x.org }}</div>
+            {% if x.desc and x.desc != "" %}<div class="hp-exp__desc">{{ x.desc }}</div>{% endif %}
           </div>
         </div>
         {% endfor %}
