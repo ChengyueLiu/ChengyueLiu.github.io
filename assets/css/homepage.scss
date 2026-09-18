@@ -188,31 +188,19 @@ body.home-page p { text-wrap: pretty; }
 }
 .hp-visit:hover { background: var(--hp-venue); }
 
-/* ---- Experience ---- */
-.hp-exp { padding-bottom: 22px; }
-.hp-exp__logo {
+/* ---- Experience & Education (same logo-node timeline) ----
+   Line 1: period · Line 2: role / school · Line 3: org / degree · Line 4: desc / note */
+.hp-exp, .hp-edu { padding-bottom: 22px; }
+.hp-exp__logo, .hp-edu__crest {
   width: 48px; height: 48px; border-radius: 50%; background: var(--hp-card); border: 1px solid var(--hp-border);
   flex: none; display: flex; align-items: center; justify-content: center; overflow: hidden;
 }
 .hp-exp__logo img { width: 34px; height: 34px; object-fit: contain; }
-.hp-exp__period { @include mono(600, 12px); color: var(--hp-accent); margin-bottom: 4px; }
-.hp-exp__role { font-size: 15px; font-weight: 700; color: var(--hp-ink); }
-.hp-exp__org { font-size: 13px; color: var(--hp-accent); font-weight: 600; margin-top: 2px; }
-.hp-exp__desc { font-size: 13px; color: var(--hp-sec); margin-top: 6px; line-height: 1.55; }
-
-/* ---- Education ---- */
-.hp-edu-list { display: flex; flex-direction: column; gap: 10px; }
-.hp-edu { padding: 15px 18px; display: flex; gap: 15px; align-items: center; }
-.hp-edu__crest {
-  width: 48px; height: 48px; border-radius: 50%; background: var(--hp-card); border: 1px solid var(--hp-border);
-  flex: none; display: flex; align-items: center; justify-content: center; overflow: hidden;
-}
 .hp-edu__crest img { width: 40px; height: 40px; object-fit: contain; }
-.hp-edu__body { flex: 1; min-width: 0; }
-.hp-edu__degree { font-size: 15px; font-weight: 700; color: var(--hp-ink); }
-.hp-edu__major { font-size: 13px; color: var(--hp-sec); margin-top: 3px; }
-.hp-edu__note { font-size: 12px; color: var(--hp-muted); margin-top: 3px; }
-.hp-edu__period { @include mono(600, 12px); color: var(--hp-muted); white-space: nowrap; }
+.hp-exp__period, .hp-edu__period { @include mono(600, 12px); color: var(--hp-accent); margin-bottom: 4px; }
+.hp-exp__role, .hp-edu__school { font-size: 15px; font-weight: 700; color: var(--hp-ink); }
+.hp-exp__org, .hp-edu__degree { font-size: 13px; color: var(--hp-accent); font-weight: 600; margin-top: 2px; }
+.hp-exp__desc, .hp-edu__note { font-size: 13px; color: var(--hp-sec); margin-top: 6px; line-height: 1.55; }
 
 /* ---- Footer ---- */
 .hp-footer {
@@ -238,8 +226,6 @@ body.home-page p { text-wrap: pretty; }
   .hp-shell { padding: 22px 18px 10px; gap: 20px; }
   .hp-hero__name { font-size: 27px; }
   .hp-footer { padding: 20px 18px 26px; }
-  .hp-edu { flex-wrap: wrap; }
-  .hp-edu__period { width: 100%; margin-left: 63px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

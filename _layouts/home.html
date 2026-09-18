@@ -169,16 +169,16 @@ layout: compress
 
     <section id="education" class="hp-section hp-section--wide hp-section--last">
       <div class="hp-sec-head"><span class="hp-sec-idx">07</span><h2>Education</h2><span class="hp-rule"></span></div>
-      <div class="hp-edu-list">
+      <div class="hp-card hp-timeline">
         {% for e in site.data.education %}
-        <div class="hp-card hp-edu">
-          <div class="hp-edu__crest"><img src="{{ e.logo | relative_url }}" alt=""></div>
-          <div class="hp-edu__body">
-            <div class="hp-edu__degree">{{ e.degree }} &middot; {{ e.school }}</div>
-            {% if e.major and e.major != "" %}<div class="hp-edu__major">{{ e.major }}</div>{% endif %}
+        <div class="hp-tl-item">
+          <div class="hp-tl-rail hp-tl-rail--logo">{% if e.logo and e.logo != "" %}<span class="hp-edu__crest"><img src="{{ e.logo | relative_url }}" alt="" width="40" height="40"></span>{% else %}<span class="hp-tl-dot"></span>{% endif %}{% unless forloop.last %}<span class="hp-tl-line hp-tl-line--exp"></span>{% endunless %}</div>
+          <div class="hp-tl-body hp-edu">
+            <div class="hp-edu__period">{{ e.period }}</div>
+            <div class="hp-edu__school">{{ e.school }}{% if e.region and e.region != "" %}, {{ e.region }}{% endif %}</div>
+            <div class="hp-edu__degree">{{ e.degree }}{% if e.major and e.major != "" %}, {{ e.major }}{% endif %}</div>
             {% if e.note and e.note != "" %}<div class="hp-edu__note">{{ e.note }}</div>{% endif %}
           </div>
-          <span class="hp-edu__period">{{ e.period }}</span>
         </div>
         {% endfor %}
       </div>

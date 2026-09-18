@@ -1,28 +1,34 @@
 # Education — newest first. Crests live in /images/edu/.
-# Rendered as:  <degree> · <school>   (bold)
-#               <major>               (small)
-#               <note>                (smaller, optional)
+# Rendered as a timeline with the crest as the node:
+#   <period>
+#   <school>, <region>      (bold)
+#   <degree>, <major>
+#   <note>                  (optional)
 - logo: "/images/edu/ntu.png"
-  degree: "Ph.D."
-  school: "Nanyang Technological University, Singapore"
-  major: "Computer Science"
   period: "Jan 2024 – Present"
+  school: "Nanyang Technological University"
+  region: "Singapore"
+  degree: "Ph.D."
+  major: "Computer Science"
   note: "Advised by Prof. Yang Liu"
 - logo: "/images/edu/buaa.png"
-  degree: "M.Eng."
-  school: "Beihang University"
-  major: "Intelligent Manufacturing Systems & Engineering"
   period: "2017 – 2020"
+  school: "Beihang University"
+  region: "China Mainland"
+  degree: "M.Eng."
+  major: "Intelligent Manufacturing Systems & Engineering"
   note: ""
 - logo: "/images/edu/nctu.png"
-  degree: "Exchange Student"
-  school: "National Chiao Tung University, Taiwan"
-  major: "Mechanical Engineering"
   period: "Sep 2015 – Jan 2016"
+  school: "National Chiao Tung University"
+  region: "China Taiwan"
+  degree: "Exchange Student"
+  major: "Mechanical Engineering"
   note: ""
 - logo: "/images/edu/hit.png"
-  degree: "B.Eng."
-  school: "Harbin Institute of Technology"
-  major: "Mechanical Design, Manufacturing & Automation"
   period: "2013 – 2017"
+  school: "Harbin Institute of Technology"
+  region: "China Mainland"
+  degree: "B.Eng."
+  major: "Mechanical Design, Manufacturing & Automation"
   note: ""
